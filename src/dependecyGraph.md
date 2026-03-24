@@ -1,14 +1,11 @@
 ```mermaid
-graph TD;
+graph LR;
     main.js-->plan.js;
+    main.js-->field.js
+    main.js-->tractor.js
     main.js-->catalog.js;
     main.js-->harvester.js;
-    catalog.js-->harvester.js;
-    harvester.js-->tractor.js;
-    harvester.js-->seeds;
+    main.js-->catalog.js
     tractor.js-->field.js;
     tractor.js-->seeds;
-    field.js-->seeds;
-
-
 ```
