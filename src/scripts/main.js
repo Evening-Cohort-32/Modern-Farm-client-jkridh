@@ -10,9 +10,10 @@ import { createWheat } from "./seeds/wheat.js";
 import { addPlant, usePlants } from "./field.js";
 import { plantSeeds } from "./tractor.js";
 import { harvestPlants } from "./harvester.js";
+import { catalog } from "./catalog.js";
 
 const yearlyPlan = createPlan();
 plantSeeds(yearlyPlan);
 const test1 = usePlants();
-console.log(test1);
-console.log(harvestPlants(test1));
+const harvestArray = harvestPlants(test1);
+catalog(harvestArray);
