@@ -9,22 +9,22 @@ import{addPlant} from "./field.js"
 export const plantSeeds = (yearlyPlan) => {
     for (const row of yearlyPlan){
         for(const plant of row) {
-            if (plant == Soybean){
+            if (plant == "Soybean"){
                 addPlant(createSoybean())
             }
-            else if(plant == Corn){
+            else if(plant == "Corn"){
                 addPlant(createCorn())
             }
-            else if(plant == Sunflower){
+            else if(plant == "Sunflower"){
                 addPlant(createSunflower())
             }
-            else if(plant == Asparagus){
+            else if(plant == "Asparagus"){
                 addPlant(createAsparagus())
             }
-            else if(plant == Wheat){
+            else if(plant == "Wheat"){
                 addPlant(createWheat())
             }
-            else if(plant == Potato){
+            else if(plant == "Potato"){
                 addPlant(createPotato())
             }
         }
