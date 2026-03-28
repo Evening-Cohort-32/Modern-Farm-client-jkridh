@@ -26,5 +26,5 @@ console.log(silo[silo.length - 1]);
 console.log(barn.peek);
 console.log(barn.pop);
 console.log(barn.peek);
-
+console.log(harvestArray)
 catalog(harvestArray);

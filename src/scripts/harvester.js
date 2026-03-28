@@ -1,4 +1,5 @@
 let seedArray = [];
+let seedArrayId = []
 let idNumber = 1;
 export const harvestPlants = (plants) => {
   for (const plant of plants) {
@@ -14,8 +15,10 @@ export const harvestPlants = (plants) => {
   }
   //Adds ID to seed
   for (const seed of seedArray) {
-    seed.id = idNumber;
-    idNumber++;
+    seedArrayId.push({
+      ...seed,
+      id: idNumber++
+    })
   }
-  return seedArray;
+  return seedArrayId;
 };
