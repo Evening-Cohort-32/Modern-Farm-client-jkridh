@@ -9,11 +9,22 @@ import { createSunflower } from "./seeds/sunflower.js";
 import { createWheat } from "./seeds/wheat.js";
 import { addPlant, usePlants } from "./field.js";
 import { plantSeeds } from "./tractor.js";
-import { harvestPlants } from "./harvester.js";
+import { harvestPlants} from "./harvester.js";
 import { catalog } from "./catalog.js";
-
+import { silo, stack } from "./siloStack.js";
 const yearlyPlan = createPlan();
 plantSeeds(yearlyPlan);
 const test1 = usePlants();
 const harvestArray = harvestPlants(test1);
+
+const barn = stack();
+console.log(barn.isEmpty());
+for (const crop of harvestArray) {
+  barn.push(crop);
+}
+console.log(silo[silo.length - 1]);
+console.log(barn.peek);
+console.log(barn.pop);
+console.log(barn.peek);
+
 catalog(harvestArray);
