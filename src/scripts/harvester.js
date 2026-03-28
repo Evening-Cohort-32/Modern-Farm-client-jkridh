@@ -13,9 +13,9 @@ export const harvestPlants = (plants) => {
     }
   }
   //Adds ID to seed
-  for (const seed of seeds) {
+  for (const seed of seedArray) {
     seed.id = idNumber;
     idNumber++;
-    return seedArray;
   }
+  return seedArray;
 };
