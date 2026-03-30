@@ -6,13 +6,16 @@ export const stack = () => {
       silo.push(crop);
     },
     pop: () => {
-      silo.pop();
+      return silo.shift();
     },
     peek: () => {
       return silo[silo.length - 1].type;
     },
     isEmpty: () => {
       return silo.length == 0;
+    },
+    length: () => {
+      return silo.length;
     },
   };
 };
