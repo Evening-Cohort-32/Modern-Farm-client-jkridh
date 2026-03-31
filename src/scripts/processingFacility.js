@@ -75,9 +75,12 @@ export const cropProcessing = (barn) => {
       conveyorBelt.enqueue(barn.pop());
       let currentItem = conveyorBelt.dequeue();
       createFood(currentItem.type);
+    } else {
+      let currentItem = conveyorBelt.dequeue();
+      createFood(currentItem.type);
     }
 
-    if (barn.isEmpty() && conveyorBelt.isEmpty() === true) {
+    if (barn.isEmpty() === true && conveyorBelt.isEmpty() === true) {
       console.log(
         "Farm Store inventory is full and ready to open for business",
       );

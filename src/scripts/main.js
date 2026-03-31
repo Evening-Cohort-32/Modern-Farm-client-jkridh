@@ -28,3 +28,4 @@ cropProcessing(barn);
 console.log(barn.isEmpty());
 console.log(farmStore);
 console.log(silo);
+

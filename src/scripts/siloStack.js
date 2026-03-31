@@ -6,7 +6,7 @@ export const stack = () => {
       silo.push(crop);
     },
     pop: () => {
-      return silo.shift();
+      return silo.pop();
     },
     peek: () => {
       return silo[silo.length - 1].type;
